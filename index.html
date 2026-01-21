@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المنتجات | Lara Teks</title>
+  <meta name="description" content="منتجات Lara Teks - ألبسة جاهزة." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <b>Lara Teks</b>
+          <small>لارا تكس • ألبسة جاهزة</small>
+        </span>
+      </a>
+
+      <nav class="links" aria-label="القائمة">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a class="active" href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn" href="tel:0938767028">اتصال</a>
+        <a class="btn primary" href="contact.html">طلب سعر</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="container mobile" id="mobileMenu">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a class="active" href="products.html">المنتجات</a>
+      <a href="contact.html">تواصل</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>المنتجات</h1>
+        <p class="sub">أمثلة فئات نشتغل فيها — عدّلها حسب شغلك الحقيقي.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid3">
+          <div class="card pad">
+            <h3>ملابس رجالية</h3>
+            <p class="muted">قمصان • بناطيل • جاكيتات خفيفة • أطقم</p>
+            <div class="chips">
+              <span class="chip">خياطة</span><span class="chip">تشطيب</span><span class="chip">جملة</span>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <h3>ملابس نسائية</h3>
+            <p class="muted">فساتين • بلايز • بناطيل • أطقم</p>
+            <div class="chips">
+              <span class="chip">موديلات</span><span class="chip">ألوان</span><span class="chip">قياسات</span>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <h3>ملابس أطفال</h3>
+            <p class="muted">بيجامات • أطقم • تيشيرتات • بناطيل</p>
+            <div class="chips">
+              <span class="chip">راحة</span><span class="chip">قماش</span><span class="chip">جودة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pad" style="margin-top:14px">
+          <h3>كيف تطلب تشكيلة؟</h3>
+          <ol class="muted steps">
+            <li>حدد الفئة (رجالي/نسائي/أطفال)</li>
+            <li>حدد القياسات والكميات</li>
+            <li>حدد نوع القماش أو المواصفات</li>
+            <li>تواصل معنا لعرض السعر</li>
+          </ol>
+          <div class="actions">
+            <a class="btn primary" href="contact.html">طلب عرض سعر</a>
+            <a class="btn" href="tel:0938767028">اتصال</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div class="muted tiny">© <span id="year"></span> Lara Teks</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

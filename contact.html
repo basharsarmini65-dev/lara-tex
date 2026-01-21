@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تواصل معنا | Lara Teks</title>
+  <meta name="description" content="تواصل مع Lara Teks - اعزاز، سوريا." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <b>Lara Teks</b>
+          <small>لارا تكس • ألبسة جاهزة</small>
+        </span>
+      </a>
+
+      <nav class="links" aria-label="القائمة">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="products.html">المنتجات</a>
+        <a class="active" href="contact.html">تواصل</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn" href="tel:0938767028">اتصال</a>
+        <a class="btn primary" href="contact.html">طلب سعر</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="container mobile" id="mobileMenu">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="products.html">المنتجات</a>
+      <a class="active" href="contact.html">تواصل</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>تواصل معنا</h1>
+        <p class="sub">اكتب تفاصيل الطلبية وسنرد عليك بأقرب وقت.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card pad">
+          <h2>طلب عرض سعر</h2>
+          <p class="muted">ملاحظة: هذا النموذج تجريبي بدون سيرفر. بعدين منربطه بواتساب أو ايميل.</p>
+
+          <form id="quoteForm">
+            <div class="row2">
+              <input name="name" placeholder="اسمك" required />
+              <input name="phone" placeholder="رقم للتواصل" required />
+            </div>
+
+            <div class="row2">
+              <select name="category" required>
+                <option value="" selected disabled>نوع القطعة</option>
+                <option>رجالي</option>
+                <option>نسائي</option>
+                <option>أطفال</option>
+                <option>غير ذلك</option>
+              </select>
+              <input name="qty" placeholder="الكمية (مثال: 200 قطعة)" />
+            </div>
+
+            <textarea name="details" placeholder="اكتب التفاصيل: قياسات، ألوان، قماش، موديل..."></textarea>
+
+            <button class="btn primary" type="submit">إرسال</button>
+            <div class="tiny muted" id="formNote" aria-live="polite"></div>
+          </form>
+
+          <div class="actions" style="margin-top:12px">
+            <a class="btn" href="tel:0938767028">اتصال مباشر: 0938767028</a>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h2>معلومات المصنع</h2>
+          <ul class="info">
+            <li><b>الاسم:</b> Lara Teks (لارا تكس)</li>
+            <li><b>الموقع:</b> سوريا – اعزاز</li>
+            <li><b>التخصص:</b> ألبسة جاهزة</li>
+            <li><b>الهاتف:</b> <a href="tel:0938767028">0938767028</a></li>
+          </ul>
+
+          <div class="note">
+            <b>اختياري:</b>
+            <div class="muted">إذا عندك رابط واتساب أو موقع على الخريطة ابعته وأنا أضيفه فوراً.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div class="muted tiny">© <span id="year"></span> Lara Teks</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
