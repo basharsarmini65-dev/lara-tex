@@ -3,10 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lara Teks | لارا تكس - ألبسة جاهزة</title>
-  <meta name="description" content="لارا تكس - مصنع ألبسة جاهزة في اعزاز، سوريا. تصنيع وتوريد بالجملة." />
+  <title>المنتجات | Lara Teks</title>
+  <meta name="description" content="منتجات Lara Teks - ألبسة جاهزة في اعزاز، سوريا." />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* تحسين شكل الصور داخل الكروت */
+    .product-img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      border-radius:14px;
+      margin-bottom:10px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(11,15,20,.35);
+    }
+    @media (max-width: 600px){
+      .product-img{ height:200px; }
+    }
+    .price{
+      margin:8px 0 0;
+      font-weight:700;
+    }
+    .muted2{ color: rgba(169,179,193,.9); }
+  </style>
 </head>
+
 <body>
   <header class="header">
     <div class="container nav">
@@ -19,133 +41,130 @@
       </a>
 
       <nav class="links" aria-label="القائمة">
-        <a class="active" href="index.html">الرئيسية</a>
+        <a href="index.html">الرئيسية</a>
         <a href="about.html">من نحن</a>
-        <a href="products.html">المنتجات</a>
+        <a class="active" href="products.html">المنتجات</a>
         <a href="contact.html">تواصل</a>
       </nav>
 
       <div class="nav-actions">
         <a class="btn" href="tel:0938767028">اتصال</a>
+        <a class="btn" href="https://wa.me/963938767028" target="_blank" rel="noopener">واتساب</a>
         <a class="btn primary" href="contact.html">طلب سعر</a>
         <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false">☰</button>
       </div>
     </div>
 
     <div class="container mobile" id="mobileMenu">
-      <a class="active" href="index.html">الرئيسية</a>
+      <a href="index.html">الرئيسية</a>
       <a href="about.html">من نحن</a>
-      <a href="products.html">المنتجات</a>
+      <a class="active" href="products.html">المنتجات</a>
       <a href="contact.html">تواصل</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="pill"><span class="dot"></span> تصنيع • توريد • جملة</div>
-          <h1>مصنع <span class="grad">Lara Teks</span> للألبسة الجاهزة</h1>
-          <p class="sub">
-            ننتج ألبسة جاهزة بجودة ثابتة وتسليم منظم. نخدم التجار والمحال والطلبيات بالجملة.
-          </p>
-
-          <div class="actions">
-            <a class="btn primary" href="contact.html">اطلب عرض سعر</a>
-            <a class="btn" href="products.html">شاهد المنتجات</a>
-            <a class="btn" href="tel:0938767028">اتصل الآن</a>
-          </div>
-
-          <div class="badges">
-            <span class="badge">جودة وخياطة مرتبة</span>
-            <span class="badge">طلبات جملة</span>
-            <span class="badge">تصاميم متنوعة</span>
-          </div>
-        </div>
-
-        <div class="card hero-card">
-          <h3>معلومات سريعة</h3>
-          <div class="stats">
-            <div class="stat">
-              <b>الموقع</b>
-              <span>سوريا • اعزاز</span>
-            </div>
-            <div class="stat">
-              <b>التخصص</b>
-              <span>ألبسة جاهزة</span>
-            </div>
-            <div class="stat">
-              <b>الهاتف</b>
-              <span>0938767028</span>
-            </div>
-            <div class="stat">
-              <b>طلبات</b>
-              <span>قطاعي + جملة</span>
-            </div>
-          </div>
-
-          <div class="mini-cta">
-            <p>بدك تسعيرة سريعة؟ ابعت التفاصيل على صفحة التواصل.</p>
-            <a class="btn primary" href="contact.html">طلب سعر</a>
-          </div>
-        </div>
+    <section class="page-hero">
+      <div class="container">
+        <h1>المنتجات</h1>
+        <p class="sub">المنتجات تظهر تلقائيًا من مجلد <b>images</b> حسب أسماء الصور.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-title">
-          <h2>خدماتنا</h2>
-          <p>نجهز لك الألبسة حسب الطلب وبكميات تناسب شغلك.</p>
+
+        <!-- شبكة المنتجات -->
+        <div class="grid3" id="productsGrid"></div>
+
+        <!-- ملاحظة -->
+        <div class="card pad" style="margin-top:14px">
+          <h3 style="margin-top:0">طريقة إضافة/تغيير المنتجات</h3>
+          <ol class="muted steps">
+            <li>ضع الصور داخل مجلد <b>images</b> في مشروع GitHub.</li>
+            <li>سمِّها: <b>shirts1.jpg</b> إلى <b>shirts5.jpg</b>.</li>
+            <li>ارفع الصور (Upload files) ثم (Commit changes).</li>
+            <li>افتح موقعك وستظهر المنتجات تلقائيًا.</li>
+          </ol>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/963938767028" target="_blank" rel="noopener">طلب عبر واتساب</a>
+            <a class="btn" href="contact.html">تواصل</a>
+          </div>
         </div>
 
-        <div class="grid3">
-          <div class="card feature">
-            <div class="icon">🧵</div>
-            <h3>تصنيع ألبسة جاهزة</h3>
-            <p>خياطة وتشطيب مرتب للألبسة اليومية والعملية.</p>
-          </div>
-          <div class="card feature">
-            <div class="icon">📦</div>
-            <h3>توريد بالجملة</h3>
-            <p>كميات مناسبة للتجار والمحال مع تنظيم بالقياسات.</p>
-          </div>
-          <div class="card feature">
-            <div class="icon">✅</div>
-            <h3>متابعة جودة</h3>
-            <p>فحص وتدقيق قبل التسليم لضمان ثبات الجودة.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section soft">
-      <div class="container cta">
-        <div>
-          <h3>جاهز تبدأ طلبية؟</h3>
-          <p>اكتب نوع القطعة + القياسات + الكمية، ونرجعلك بسعر سريع.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn primary" href="contact.html">تواصل الآن</a>
-          <a class="btn" href="tel:0938767028">اتصال</a>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container foot">
-      <div class="brand small">
-        <span class="logo" aria-hidden="true"></span>
-        <div>
-          <b>Lara Teks</b>
-          <div class="muted tiny">سوريا • اعزاز • ألبسة جاهزة</div>
-        </div>
-      </div>
-      <div class="muted tiny">© <span id="year"></span> Lara Teks. جميع الحقوق محفوظة.</div>
+      <div class="muted tiny">© <span id="year"></span> Lara Teks</div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    // أسماء الصور التي ستضعها في images/
+    const imageFiles = [
+      "shirts1.jpg",
+      "shirts2.jpg",
+      "shirts3.jpg",
+      "shirts4.jpg",
+      "shirts5.jpg"
+    ];
+
+    // معلومات المنتجات (تقدر تعدل النصوص من هنا فقط)
+    // كل منتج مربوط بالصورة بنفس الترتيب
+    const products = [
+      { name: "قميص رجالي 1", category: "رجالي", price: "حسب الكمية", desc: "قماش جيد • خياطة مرتبة • قياسات متعددة" },
+      { name: "قميص رجالي 2", category: "رجالي", price: "حسب الكمية", desc: "ألوان متنوعة • مناسب للجملة" },
+      { name: "قميص رجالي 3", category: "رجالي", price: "حسب الكمية", desc: "تشطيب ممتاز • طلبات تجار" },
+      { name: "قميص رجالي 4", category: "رجالي", price: "حسب الكمية", desc: "تصميم عملي • جودة ثابتة" },
+      { name: "قميص رجالي 5", category: "رجالي", price: "حسب الكمية", desc: "موديل جديد • إمكانية كميات كبيرة" }
+    ];
+
+    const grid = document.getElementById("productsGrid");
+
+    function productCard(p, imgFile){
+      const imgSrc = "images/" + imgFile; // توجيه مباشر لمجلد images
+      const waText = encodeURIComponent("مرحبا لارا تكس، أريد طلب المنتج: " + (p.name || ""));
+      const waLink = "https://wa.me/963938767028?text=" + waText;
+
+      return `
+        <div class="card pad">
+          <img class="product-img" src="${imgSrc}" alt="${p.name || "منتج"}"
+               onerror="this.style.display='none'">
+          <h3 style="margin:0 0 6px">${p.name || ""}</h3>
+          <p class="muted" style="margin:0">${p.desc || ""}</p>
+
+          <p class="price">السعر: <span class="muted2">${p.price || "حسب الكمية"}</span></p>
+
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">${p.category || "عام"}</span>
+            <span class="chip">جملة</span>
+            <span class="chip">ألبسة جاهزة</span>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn primary" target="_blank" rel="noopener" href="${waLink}">اطلب واتساب</a>
+            <a class="btn" href="tel:0938767028">اتصال</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function render(){
+      // إذا عدد الصور أقل/أكثر من المنتجات، نعرض المتاح فقط
+      const count = Math.min(products.length, imageFiles.length);
+      let html = "";
+      for (let i = 0; i < count; i++){
+        html += productCard(products[i], imageFiles[i]);
+      }
+      grid.innerHTML = html || "<div class='card pad'>لا يوجد منتجات بعد.</div>";
+    }
+
+    render();
+  </script>
 </body>
 </html>
